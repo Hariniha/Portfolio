@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
-import { useTheme } from '../App';
 
 const Hero = () => {
-  const { isDark } = useTheme();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -21,16 +19,12 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-
-
-
       {/* Floating Icons */}
       <div className="absolute inset-0 pointer-events-none">
         {[...Array(8)].map((_, i) => (
           <div
             key={i}
-            className={`absolute animate-bounce ${isDark ? 'text-purple-300/20' : 'text-blue-300/30'
-              }`}
+            className="absolute animate-bounce text-purple-300/20"
             style={{
               left: `${10 + i * 11}%`,
               top: `${15 + i * 8}%`,
@@ -46,9 +40,8 @@ const Hero = () => {
       {/* Main Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <div className="animate-fade-in-up">
-          <h1 className={`text-5xl md:text-7xl font-bold mb-6 ${isDark ? 'text-white' : 'text-gray-900'
-            }`}>
-            Harini Priya
+          <h1 className="text-9xl md:text-7xl font-bold mb-6 text-white">
+            Hi, I'm Harini Priya
           </h1>
           <div className="text-xl md:text-2xl mb-8 font-semibold">
             <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
@@ -56,9 +49,8 @@ const Hero = () => {
             </span>{' '}
             💻
           </div>
-          <p className={`text-lg md:text-xl mb-12 max-w-5xl mx-auto leading-relaxed ${isDark ? 'text-gray-300' : 'text-gray-600'
-            }`}>
-            Crafting responsive UIs and full-stack web apps with clean code and creativity.<br/>
+          <p className="text-lg md:text-xl mb-12 max-w-5xl mx-auto leading-relaxed text-gray-300">
+            Crafting responsive UIs and full-stack web apps with clean code and creativity.<br />
             Passionate Frontend & MERN Stack Developer building sleek UIs and robust full-stack apps.
           </p>
 
@@ -72,10 +64,7 @@ const Hero = () => {
               <a
                 key={label}
                 href={href}
-                className={`p-3 rounded-full transition-all duration-300 hover:scale-110 ${isDark
-                  ? 'bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm'
-                  : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
-                  }`}
+                className="p-3 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm transition-all duration-300 hover:scale-110"
                 aria-label={label}
               >
                 <Icon size={24} />
@@ -93,10 +82,7 @@ const Hero = () => {
             </button>
             <button
               onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className={`px-8 py-3 rounded-full font-semibold border-2 transition-all duration-300 hover:scale-105 ${isDark
-                ? 'border-white/30 text-white hover:bg-white/10'
-                : 'border-gray-300 text-gray-700 hover:bg-gray-50'
-                }`}
+              className="px-8 py-3 rounded-full font-semibold border-2 border-white/30 text-white hover:bg-white/10 transition-all duration-300 hover:scale-105"
             >
               Let's Connect
             </button>
@@ -107,8 +93,7 @@ const Hero = () => {
       {/* Scroll Indicator */}
       <button
         onClick={scrollToNext}
-        className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce ${isDark ? 'text-white/70' : 'text-gray-600'
-          }`}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-white/70"
       >
         <ChevronDown size={32} />
       </button>

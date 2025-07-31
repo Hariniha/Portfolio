@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useTheme } from '../App';
 
 const TechStack = () => {
-  const { isDark } = useTheme();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const technologies = [
@@ -37,9 +35,7 @@ const TechStack = () => {
         {[...Array(12)].map((_, i) => (
           <div
             key={i}
-            className={`absolute animate-pulse ${
-              isDark ? 'text-purple-500/10' : 'text-blue-500/10'
-            }`}
+            className="absolute animate-pulse text-purple-500/10"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -55,29 +51,19 @@ const TechStack = () => {
 
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-16">
-          <h2 className={`text-4xl md:text-5xl font-bold mb-6 ${
-            isDark ? 'text-white' : 'text-gray-900'
-          }`}>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Tech Stack
           </h2>
-          <p className={`text-xl max-w-3xl mx-auto ${
-            isDark ? 'text-gray-300' : 'text-gray-600'
-          }`}>
+          <p className="text-xl max-w-3xl mx-auto text-gray-300">
             The tools and technologies I use to bring ideas to life.
           </p>
         </div>
 
         {/* Featured Technology Carousel */}
         <div className="mb-16 text-center">
-          <div className={`inline-block p-8 rounded-2xl mb-4 transition-all duration-500 ${
-            isDark 
-              ? 'bg-white/5 backdrop-blur-sm border border-white/10' 
-              : 'bg-white/80 backdrop-blur-sm border border-gray-200 shadow-xl'
-          }`}>
+          <div className="inline-block p-8 rounded-2xl mb-4 bg-white/5 backdrop-blur-sm border border-white/10 transition-all duration-500">
             <div className="text-6xl mb-4">{technologies[currentIndex].icon}</div>
-            <h3 className={`text-2xl font-bold ${
-              isDark ? 'text-white' : 'text-gray-900'
-            }`}>
+            <h3 className="text-2xl font-bold text-white">
               {technologies[currentIndex].name}
             </h3>
             <p className="text-purple-600 font-medium">
@@ -92,9 +78,7 @@ const TechStack = () => {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === currentIndex 
-                    ? 'bg-purple-600 w-6' 
-                    : isDark ? 'bg-white/30' : 'bg-gray-300'
+                  index === currentIndex ? 'bg-purple-600 w-6' : 'bg-white/30'
                 }`}
               />
             ))}
@@ -105,9 +89,7 @@ const TechStack = () => {
         <div className="space-y-12">
           {categories.map((category) => (
             <div key={category}>
-              <h3 className={`text-2xl font-bold mb-6 text-center ${
-                isDark ? 'text-white' : 'text-gray-900'
-              }`}>
+              <h3 className="text-2xl font-bold mb-6 text-center text-white">
                 {category}
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
@@ -116,11 +98,7 @@ const TechStack = () => {
                   .map((tech, index) => (
                     <div
                       key={tech.name}
-                      className={`group p-4 rounded-xl text-center transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer ${
-                        isDark 
-                          ? 'bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10' 
-                          : 'bg-white/80 backdrop-blur-sm border border-gray-200 hover:shadow-xl'
-                      }`}
+                      className="group p-4 rounded-xl text-center transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10"
                       style={{ 
                         animationDelay: `${index * 0.1}s`,
                         transform: `translateY(${Math.sin((Date.now() / 1000 + index) * 0.5) * 2}px)`,
@@ -129,9 +107,7 @@ const TechStack = () => {
                       <div className="text-3xl mb-2 group-hover:scale-125 transition-transform duration-300">
                         {tech.icon}
                       </div>
-                      <div className={`text-sm font-medium ${
-                        isDark ? 'text-gray-300' : 'text-gray-700'
-                      }`}>
+                      <div className="text-sm font-medium text-gray-300">
                         {tech.name}
                       </div>
                     </div>
@@ -147,9 +123,7 @@ const TechStack = () => {
             {[...technologies, ...technologies].map((tech, index) => (
               <div
                 key={index}
-                className={`flex-shrink-0 w-16 h-16 rounded-lg flex items-center justify-center text-2xl ${
-                  isDark ? 'bg-white/5' : 'bg-white/50'
-                }`}
+                className="flex-shrink-0 w-16 h-16 rounded-lg flex items-center justify-center text-2xl bg-white/5"
               >
                 {tech.icon}
               </div>
