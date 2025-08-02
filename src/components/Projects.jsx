@@ -107,7 +107,7 @@ const Projects = () => {
 
         <div className="text-center mt-12">
           <a
-            href="#"
+            href="https://github.com/Hariniha"
             className="inline-flex items-center px-6 py-3 rounded-full font-semibold bg-white/10 text-white hover:bg-white/20 border border-white/20 transition-all duration-300 hover:scale-105"
           >
             View All Projects

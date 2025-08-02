@@ -35,8 +35,8 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'alex.chen@email.com',
-      href: 'mailto:alex.chen@email.com',
+      value: 'harinipriya.se@gmail.com',
+      href: 'mailto:harinipriya.se@gmail.com',
     },
     {
       icon: Phone,
@@ -47,7 +47,7 @@ const Contact = () => {
     {
       icon: MapPin,
       label: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Chennai, India',
       href: '#',
     },
   ];

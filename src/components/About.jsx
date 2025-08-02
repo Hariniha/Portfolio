@@ -10,7 +10,7 @@ const About = () => {
     },
     {
       icon: Palette,
-      title: 'UI/UX Design',
+      title: 'UI',
       description: 'Creating beautiful, intuitive interfaces that users love to interact with.',
     },
     {
@@ -41,18 +41,17 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="space-y-6">
             <p className="text-lg leading-relaxed text-gray-300">
-              Hi there! I'm Alex, a full-stack developer based in San Francisco. I specialize 
-              in building exceptional digital experiences that are fast, accessible, and 
-              visually appealing.
+              Hi there! I'm Harini, a full-stack developer based in India.
+I specialize in building fast, responsive, and visually engaging web applications using the MERN stack (MongoDB, Express.js, React, Node.js). I’m passionate about writing clean, maintainable code and creating user-friendly digital experiences that solve real-world problems.</p>
+            <p className="text-lg leading-relaxed text-gray-300">
+Alongside my core full-stack work, I’ve also had the opportunity to explore 3D web development using WebGL during an internship, where I worked on creating interactive and graphics-rich interfaces—deepening my interest in immersive web technologies.
+I also won third prize at the Cepheus Hackathon for a Web3-based project, where my team and I built a decentralized solution showcasing innovation in blockchain technology.
+
             </p>
             <p className="text-lg leading-relaxed text-gray-300">
-              My journey in tech started 5 years ago, and I've had the privilege of working 
-              with startups, agencies, and Fortune 500 companies. I love turning complex 
-              problems into simple, beautiful solutions.
-            </p>
-            <p className="text-lg leading-relaxed text-gray-300">
-              When I'm not coding, you'll find me exploring new design trends, contributing 
-              to open source projects, or hiking in the beautiful California mountains.
+              I’m always learning, refining my UI/UX skills with tools like Tailwind CSS, and building backend services that scale.
+
+
             </p>
           </div>
 

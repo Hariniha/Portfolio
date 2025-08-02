@@ -7,61 +7,48 @@ const Experience = () => {
 
   const experiences = [
     {
-      title: 'Senior Full Stack Developer',
-      company: 'TechCorp Inc.',
+      title: 'Frontend Developer',
+      company: 'Dbotics Technology And Solution Private Limited',
       period: '2022 - Present',
       location: 'San Francisco, CA',
       description:
-        'Lead development of scalable web applications serving 1M+ users. Architected microservices infrastructure and mentored junior developers.',
+        'Website Building With React.js and Three.js.',
       achievements: [
         'Improved application performance by 40%',
-        'Led a team of 5 developers',
-        'Implemented CI/CD pipelines reducing deployment time by 60%',
+        'Idea of Workspace',
+        'Learn to Split the bunch of code into small chunks',
+        
       ],
-      technologies: ['React', 'Node.js', 'AWS', 'Docker', 'TypeScript'],
-    },
-    {
-      title: 'Full Stack Developer',
-      company: 'StartupXYZ',
-      period: '2020 - 2022',
-      location: 'Remote',
-      description:
-        "Built the company's main product from scratch, handling both frontend and backend development. Collaborated closely with design and product teams.",
-      achievements: [
-        'Developed MVP from concept to launch in 6 months',
-        'Achieved 99.9% uptime',
-        'Implemented real-time features serving 50K+ concurrent users',
-      ],
-      technologies: ['Vue.js', 'Python', 'PostgreSQL', 'Redis', 'WebSocket'],
+      technologies: ['React.js', 'Three.js'],
     },
     {
       title: 'Frontend Developer',
-      company: 'Digital Agency Pro',
-      period: '2019 - 2020',
-      location: 'New York, NY',
+      company: 'Hacakathon Winner',
+      period: '2025',
+      location: 'Bangalore, India',
       description:
-        'Created responsive websites and web applications for various clients. Focused on performance optimization and user experience.',
+        "Collaborated closely with design and product teams.",
       achievements: [
-        'Delivered 20+ client projects on time',
-        'Achieved average 95+ Lighthouse scores',
-        'Reduced bounce rate by 35% across client sites',
+        'Won 3rd prize at the Cepheus Hackathon',
+        'Collabrated with team to build a decentralized solution showcasing innovation in blockchain technology'
+        
       ],
-      technologies: ['React', 'JavaScript', 'SASS', 'WordPress', 'jQuery'],
+      technologies: ['React.js', 'Blockchain Technology'],
     },
     {
-      title: 'Junior Web Developer',
-      company: 'WebSolutions LLC',
-      period: '2018 - 2019',
-      location: 'Austin, TX',
+      title: 'Frontend Developer',
+      company: 'Hackathon Winner',
+      period: '2025',
+      location: 'Chennai, India',
       description:
-        'Started my professional journey building websites and learning modern web technologies. Gained experience in both frontend and backend development.',
+        'Created responsive websites. ',
       achievements: [
-        'Completed 10+ successful projects',
-        'Learned React, Node.js, and MongoDB',
-        'Contributed to open source projects',
+        'Won 3rd prize at the OpenHAcks Hackathon',
+        'Developed a decentralized solution showcasing innovation in blockchain technology'
       ],
-      technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
+      technologies: ['React.js', 'Blockchain Technology'],
     },
+    
   ];
 
   useEffect(() => {
@@ -100,7 +87,7 @@ const Experience = () => {
           <div className="space-y-12">
             {experiences.map((exp, index) => (
               <div
-                key={exp.title}
+                key={`${exp.title}-${exp.company}-${exp.period}`}
                 data-index={index}
                 className={`experience-item relative pl-20 transition-all duration-700 ${
                   visibleItems.includes(index)
@@ -165,7 +152,7 @@ const Experience = () => {
 
         <div className="text-center mt-12">
           <a
-            href="#"
+             onClick={() => window.open("/Harini.pdf", "_blank")}
             className="inline-flex items-center px-6 py-3 rounded-full font-semibold bg-white/10 text-white hover:bg-white/20 border border-white/20 transition-all duration-300 hover:scale-105"
           >
             Download Resume

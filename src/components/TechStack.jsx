@@ -4,18 +4,18 @@ const TechStack = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const technologies = [
-    { name: 'JavaScript', icon: '🟨', category: 'Language' },
-    { name: 'TypeScript', icon: '🔷', category: 'Language' },
-    { name: 'React', icon: '⚛️', category: 'Frontend' },
-    { name: 'Next.js', icon: '▲', category: 'Frontend' },
-    { name: 'Vue.js', icon: '💚', category: 'Frontend' },
-    { name: 'Node.js', icon: '💚', category: 'Backend' },
-    { name: 'Python', icon: '🐍', category: 'Backend' },
-    { name: 'MongoDB', icon: '🍃', category: 'Database' },
-    { name: 'PostgreSQL', icon: '🐘', category: 'Database' },
-    { name: 'Docker', icon: '🐳', category: 'DevOps' },
-    { name: 'AWS', icon: '☁️', category: 'Cloud' },
-    { name: 'Git', icon: '📝', category: 'Tools' },
+    { name: 'JavaScript' },
+    { name: 'TypeScript' },
+    { name: 'React'} ,
+    { name: 'Next.js'},
+    { name: 'Vercel'},
+    { name: 'Node.js'},
+    { name: 'Express'},
+    { name: 'MongoDB' },
+    { name: 'Material UI'},
+    { name: 'HTML' },
+    { name: 'CSS' },
+    { name: 'Git' },
   ];
 
   useEffect(() => {
@@ -85,51 +85,26 @@ const TechStack = () => {
           </div>
         </div>
 
-        {/* Technology Grid by Category */}
-        <div className="space-y-12">
-          {categories.map((category) => (
-            <div key={category}>
-              <h3 className="text-2xl font-bold mb-6 text-center text-white">
-                {category}
-              </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                {technologies
-                  .filter(tech => tech.category === category)
-                  .map((tech, index) => (
-                    <div
-                      key={tech.name}
-                      className="group p-4 rounded-xl text-center transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10"
-                      style={{ 
-                        animationDelay: `${index * 0.1}s`,
-                        transform: `translateY(${Math.sin((Date.now() / 1000 + index) * 0.5) * 2}px)`,
-                      }}
-                    >
-                      <div className="text-3xl mb-2 group-hover:scale-125 transition-transform duration-300">
-                        {tech.icon}
-                      </div>
-                      <div className="text-sm font-medium text-gray-300">
-                        {tech.name}
-                      </div>
-                    </div>
-                  ))}
+       
+    
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-12">
+          {technologies.map((tech, index) => (
+            <div
+              key={tech.name}
+              className="group p-4 rounded-xl text-center transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10"
+            >
+              
+              <div className="text-2xl font-bold text-gray-300">
+                {tech.name}
               </div>
             </div>
           ))}
         </div>
 
-        {/* Floating Tech Icons Animation */}
-        <div className="mt-16 relative h-32 overflow-hidden">
-          <div className="flex animate-slide space-x-8">
-            {[...technologies, ...technologies].map((tech, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 w-16 h-16 rounded-lg flex items-center justify-center text-2xl bg-white/5"
-              >
-                {tech.icon}
-              </div>
-            ))}
-          </div>
-        </div>
+
+
+        
+       
       </div>
     </section>
   );
